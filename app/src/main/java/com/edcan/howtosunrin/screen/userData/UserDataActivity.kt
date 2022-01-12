@@ -54,8 +54,8 @@ class UserDataActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             else if (viewModel.major.value!! == 0){
-                //todo
-                Toast.makeText(this, "학과를 선택해주세요.", Toast.LENGTH_LONG).show()
+                //todo 4 토스트 메시지로 학과를 선택해달라고 띄워주자
+
                 return@setOnClickListener
             }
 
@@ -63,7 +63,7 @@ class UserDataActivity : AppCompatActivity() {
                 val result = viewModel.saveUserData()
 
                 withContext(Dispatchers.Main){
-                    //todo
+                    //todo 5 아래 코드를 이해하자
                     if(result == UserUtil.ResultSuccess){
                         Toast.makeText(this@UserDataActivity, "유저 등록에 성공했습니다.", Toast.LENGTH_LONG).show()
                         
