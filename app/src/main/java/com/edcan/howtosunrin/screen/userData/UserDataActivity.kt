@@ -55,12 +55,13 @@ class UserDataActivity : AppCompatActivity() {
             }
             else if (viewModel.major.value!! == 0){
                 //todo 4 토스트 메시지로 학과를 선택해달라고 띄워주자
+                Toast.makeText(this, "학과를 선택하세요.", Toast.LENGTH_SHORT).show()
 
                 return@setOnClickListener
             }
 
             CoroutineScope(Dispatchers.IO).launch {
-                val result = viewModel.saveUserData()
+                val result = viewModel.saveUserData() //사용자의 정보를 저장한다. ->UserUtil.ResultSuccess
 
                 withContext(Dispatchers.Main){
                     //todo 5 아래 코드를 이해하자

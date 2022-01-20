@@ -43,7 +43,6 @@
                 android:text="단체 채팅"
                 android:textSize="20sp"
                 android:fontFamily="@font/roboto_black"
-                android:textColor="@color/black"
 
                 app:layout_constraintTop_toTopOf="@id/img_chat_prevBtn"
                 app:layout_constraintBottom_toBottomOf="@id/img_chat_prevBtn"
@@ -115,9 +114,6 @@
 
                 android:text="@={viewModel.content}"
                 android:textSize="20sp"
-
-                android:background="@drawable/default_round_10"
-                android:backgroundTint="@color/gray"
 
                 android:paddingHorizontal="4dp"
                 android:paddingVertical="8dp"

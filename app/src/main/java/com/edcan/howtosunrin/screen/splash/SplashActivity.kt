@@ -44,6 +44,7 @@ class SplashActivity : AppCompatActivity() {
                 finish()
             }   else{ //두번째 이상 실행인 경우
                 //todo 1 MainActivity에서 SplashActivity로 화면전환을 위한 intent를 만들어주세요.
+                val intent = Intent(this@SplashActivity, MainActivity::class.java)
 
 
                 val userData = userDB.getUserDataById(userId!!)
@@ -52,9 +53,11 @@ class SplashActivity : AppCompatActivity() {
                 Log.d("userData", userId)
                 Log.d("userData", userData.toString())
                 //todo 2 log.d의 d는 무엇의 약자? log에는 또 어떤 것이 표시될까요?
+                // debug
 
 
                 //todo 3 인텐트 후 finish가 있는 이유가 뭘까... 한 번 생각해봅시다
+                //스플래쉬 화면을 끄려고
                 startActivity(intent)
                 finish()
             }

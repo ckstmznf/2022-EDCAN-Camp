@@ -40,7 +40,7 @@
         android:gravity="start|center"
 
         android:background="@drawable/default_round_10"
-        android:backgroundTint="@color/opponentChatColor"
+        android:backgroundTint="@color/gray2"
 
         android:paddingVertical="8dp"
         android:paddingHorizontal="10dp"

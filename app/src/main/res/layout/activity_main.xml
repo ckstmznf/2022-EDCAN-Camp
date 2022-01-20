@@ -47,7 +47,6 @@
 
                 android:text="선린에 대한 궁금증을 해소 시켜주는"
                 android:textSize="20sp"
-                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
                 />
             <TextView
@@ -56,7 +55,6 @@
 
                 android:text="How to Sunrin"
                 android:textSize="32sp"
-                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_bold"
                 />
             <TextView
@@ -65,7 +63,6 @@
 
                 android:text="에 오신 것을 환영합니다!"
                 android:textSize="24sp"
-                android:textColor="@color/black"
                 android:fontFamily="@font/roboto_regular"
                 />
         </LinearLayout>
@@ -106,7 +103,6 @@
                 android:layout_height="wrap_content"
 
                 android:text="선린에 대한 전반적인 궁금증이 있다면?"
-                android:fontFamily="@font/roboto_light"
                 />
 
             <Button
@@ -114,12 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                style="@style/customButtonStyle"
-
                 android:text="QnA 질문 보기"
-
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="12dp"
                 />
 
             <TextView
@@ -127,7 +118,6 @@
                 android:layout_height="wrap_content"
 
                 android:text="다른 사람들과 궁금증을 공유"
-                android:fontFamily="@font/roboto_light"
                 />
 
             <Button
@@ -135,14 +125,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 
-                style="@style/customButtonStyle"
-
                 android:text="단체 채팅 하기"
 
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="12dp"
                 />
-
         </LinearLayout>
 
         <androidx.constraintlayout.widget.Guideline

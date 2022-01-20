@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         binding.btnMainGotoQnA.setOnClickListener {
             val intent = Intent(this, QnAActivity::class.java)
             //todo 6 currentUserData를 userData라는 이름으로 QnAActivity에 넘겨주자
+            intent.putExtra("userData", currentUserData)
+            startActivity(intent)
 
         }
 

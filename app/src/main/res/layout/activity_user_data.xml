@@ -19,15 +19,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:fontFamily="@font/roboto_bold"
-            android:gravity="center"
             android:text="환영합니다!\n로그인을 해주세요"
-            android:textColor="@color/black"
             android:textSize="32sp"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_bold"
 
             app:layout_constraintBottom_toTopOf="@+id/img_userData_illust"
             app:layout_constraintEnd_toEndOf="@+id/guide_userData_line2"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/guide_userData_line1"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
@@ -53,7 +51,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
-            android:background="@drawable/default_round_10"
             android:gravity="center"
             android:hint="이름"
 
@@ -63,9 +60,9 @@
 
             app:layout_constraintBottom_toTopOf="@+id/spinner_userData_choiceMajor"
             app:layout_constraintEnd_toEndOf="@+id/guide_userData_line2"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/guide_userData_line1"
-            app:layout_constraintTop_toBottomOf="@+id/img_userData_illust" />
+            app:layout_constraintTop_toBottomOf="@+id/img_userData_illust"
+            />
 
 
         <Spinner
@@ -107,7 +104,8 @@
             app:layout_constraintBottom_toBottomOf="@id/checkBoc_userData_choiceNewbi"
             app:layout_constraintEnd_toStartOf="@+id/guide_userData_line2"
             app:layout_constraintStart_toEndOf="@+id/checkBoc_userData_choiceNewbi"
-            app:layout_constraintTop_toTopOf="@id/checkBoc_userData_choiceNewbi" />
+            app:layout_constraintTop_toTopOf="@id/checkBoc_userData_choiceNewbi"
+            />
 
 
         <Button
@@ -117,8 +115,6 @@
 
             android:text="입력 완료"
             android:textSize="20sp"
-
-            android:background="@drawable/default_round_10"
 
             app:layout_constraintTop_toBottomOf="@id/checkBoc_userData_choiceNewbi"
             app:layout_constraintBottom_toBottomOf="parent"

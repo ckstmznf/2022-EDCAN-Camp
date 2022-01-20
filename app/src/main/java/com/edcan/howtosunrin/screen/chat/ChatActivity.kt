@@ -50,16 +50,22 @@ class ChatActivity : AppCompatActivity() {
 
         CoroutineScope(Dispatchers.Main).launch {
             chatDB.db.collection("ChatGroup").orderBy("timeStamp")
-                .addSnapshotListener { value, error ->
+                .addSnapshotListener { value, error -> //서버에 데이터 변동이 있을때 실행되는 함수
                     //todo 7 에러가 날 때 경고하는 내용의 토스트 메세지를 띄워주세요.
-                    if(){
+                    if(error != null){
+                        // null 값이 없다.
+                        // 정상적인 상황 -> 에러가 없다, -> 에러가 null이다. -> error == null
+                        // 오류가 있는 상황 -> 에러가 있다 -> 에러가 null이 아니다. -> error != null
 
+                        Toast.makeText(this@ChatActivity, "에러가 발생했습니다. 채팅을 종료합니다.", Toast.LENGTH_LONG).show()
                         finish()
 
                         return@addSnapshotListener
                     }
+
                     //todo 8 입력 값이 없을 때 경고하는 내용의 토스트 메세지를 띄워주세요.
-                    if(){
+                    if(value == null){
+                        Toast.makeText(this@ChatActivity, "받아온 값이 없습니다.", Toast.LENGTH_LONG).show()
 
                         finish()
 
