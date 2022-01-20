@@ -1,18 +1,20 @@
-package com.edcan.howtosunrin.screen.chat
+package com.edcan.howtosunrin.ui.chat
 
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.edcan.howtosunrin.R
+import com.edcan.howtosunrin.base.BaseActivity
 import com.edcan.howtosunrin.databinding.ActivityGroupChatBinding
 import com.edcan.howtosunrin.utill.chat.Chat
 import com.edcan.howtosunrin.utill.chat.ChatUtil
-import com.edcan.howtosunrin.screen.chat.recycler.GroupChatRecyclerAdapter
-import com.edcan.howtosunrin.screen.splash.chatDB
+import com.edcan.howtosunrin.ui.chat.recycler.GroupChatRecyclerAdapter
+import com.edcan.howtosunrin.ui.splash.chatDB
 import com.edcan.howtosunrin.utill.user.User
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -21,18 +23,15 @@ import kotlinx.coroutines.withContext
 import java.util.*
 
 
-class ChatActivity : AppCompatActivity() {
-    lateinit var binding : ActivityGroupChatBinding
-    lateinit var viewModel: ChatActivityViewModel
+class ChatActivity : BaseActivity<ActivityGroupChatBinding>(R.layout.activity_group_chat) {
+    private val viewModel : ChatActivityViewModel by viewModels()
+
     lateinit var groupChat_RecyclerAdapter: GroupChatRecyclerAdapter
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_group_chat)
-        viewModel = ViewModelProvider(this).get(ChatActivityViewModel::class.java)
         binding.viewModel = viewModel
-        binding.lifecycleOwner = this
 
         viewModel.userData.value = intent.getSerializableExtra("userData") as User
 

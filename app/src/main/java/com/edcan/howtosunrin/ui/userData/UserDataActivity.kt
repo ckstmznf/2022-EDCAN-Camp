@@ -1,4 +1,4 @@
-package com.edcan.howtosunrin.screen.userData
+package com.edcan.howtosunrin.ui.userData
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,27 +7,25 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.edcan.howtosunrin.R
+import com.edcan.howtosunrin.base.BaseActivity
 import com.edcan.howtosunrin.databinding.ActivityUserDataBinding
 import com.edcan.howtosunrin.utill.user.UserUtil
-import com.edcan.howtosunrin.screen.main.MainActivity
+import com.edcan.howtosunrin.ui.main.MainActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class UserDataActivity : AppCompatActivity() {
-    lateinit var binding : ActivityUserDataBinding
-    lateinit var viewModel: UserDataViewModel
+class UserDataActivity : BaseActivity<ActivityUserDataBinding>(R.layout.activity_user_data) {
+    val viewModel : UserDataViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_user_data)
-        viewModel = ViewModelProvider(this).get(UserDataViewModel::class.java)
         binding.viewModel = viewModel
-        binding.lifecycleOwner = this
 
         val majorArray = arrayOf("학과를 선택해주세요.", "정보보호과", "소프트웨어과", "IT경영과", "콘텐츠 디자인과")
         binding.spinnerUserDataChoiceMajor.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, majorArray)

@@ -1,4 +1,4 @@
-package com.edcan.howtosunrin.screen.main
+package com.edcan.howtosunrin.ui.main
 
 import android.content.Intent
 import android.net.Uri
@@ -6,18 +6,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.edcan.howtosunrin.R
+import com.edcan.howtosunrin.base.BaseActivity
 import com.edcan.howtosunrin.databinding.ActivityMainBinding
 import com.edcan.howtosunrin.utill.user.User
-import com.edcan.howtosunrin.screen.chat.ChatActivity
-import com.edcan.howtosunrin.screen.qna.QnAActivity
+import com.edcan.howtosunrin.ui.chat.ChatActivity
+import com.edcan.howtosunrin.ui.qna.QnAActivity
+import com.edcan.howtosunrin.ui.qna.QnAActivityViewModel
 
-class MainActivity : AppCompatActivity() {
-    lateinit var binding : ActivityMainBinding
+class MainActivity : BaseActivity<ActivityMainBinding>(R.layout.activity_main) {
     lateinit var currentUserData : User
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         currentUserData = intent.getSerializableExtra("userData") as User
 

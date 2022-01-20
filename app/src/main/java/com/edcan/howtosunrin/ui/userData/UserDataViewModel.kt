@@ -1,10 +1,10 @@
-package com.edcan.howtosunrin.screen.userData
+package com.edcan.howtosunrin.ui.userData
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.edcan.howtosunrin.utill.SharedUtil
 import com.edcan.howtosunrin.utill.user.User
-import com.edcan.howtosunrin.screen.splash.userDB
+import com.edcan.howtosunrin.ui.splash.userDB
 import java.text.SimpleDateFormat
 import java.util.*
 

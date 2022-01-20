@@ -1,4 +1,4 @@
-package com.edcan.howtosunrin.screen.chat.recycler
+package com.edcan.howtosunrin.ui.chat.recycler
 
 import android.content.Context
 import android.util.Log
@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.edcan.howtosunrin.R
 import com.edcan.howtosunrin.utill.chat.Chat
 import com.edcan.howtosunrin.utill.user.User
-import com.edcan.howtosunrin.screen.splash.userDB
+import com.edcan.howtosunrin.ui.splash.userDB
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
